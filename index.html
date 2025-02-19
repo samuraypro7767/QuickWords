@@ -6,6 +6,10 @@
     <title>QuickWords</title>
     <link rel="stylesheet" href="css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+
+    
+
 </head>
 <body>
     <main>
@@ -21,15 +25,19 @@
             <span class="letter color9">d</span>
             <span class="letter color10">s</span>
         </h1>
-        <div class="buttons">
+        <div class="buttonContainer">
             <div class="button-play">
-                <button class="button-yellow" title="Jugar"><i class='bx bx-play' style='color:#ffffff'></i></button>
+                <a href="#" class="button-yellow" title="Jugar"><i class='bx bx-play' style='color:#ffffff'></i></a>
             </div>
             <div class="buttons-low">
-                <button class="button blue" title="Menú"><i class='bx bx-food-menu' style='color:#ffffff'></i></button>
-                <button class="button red" title="Configuración"><i class='bx bx-cog' style='color:#ffffff'></i></button>
+                <a class="button blue" title="Menú"><i class='bx bx-food-menu' style='color:#ffffff'></i></a>
+                <a class="button red" id="audioButton" title="Musica">
+                    <i class='bx bxs-volume-full' id="audioIcon" style='color:#ffffff'></i>
+                </a>
             </div>
         </div>
+        
     </main>
+    <script src="scripts/index.js"></script>
 </body>
 </html>
