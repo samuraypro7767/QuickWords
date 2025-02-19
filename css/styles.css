@@ -28,6 +28,16 @@
       color: #555;
       margin-bottom: 5rem;
   }
+h1 .color1 { color: #4ce7bb; }
+h1 .color2 { color: #0a0a0a; }
+h1 .color3 { color: #d66356; }
+h1 .color4 { color: #aaa3a3; }
+h1 .color5 { color: #81d2e0; }
+h1 .color6 { color: #f7de56; }
+h1 .color7 { color: #1d1d1c; }
+h1 .color8 { color: #878586; }
+h1 .color9 { color: #c03f1e; }
+h1 .color10 { color: #97e8f0; }
   
   .buttons {
       margin-top: 5rem;
