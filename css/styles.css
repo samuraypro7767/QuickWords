@@ -304,3 +304,51 @@ input:focus {
     flex-direction: column;     
 
 } 
+
+/*      Game css    */
+
+.player-name {
+    font-size: 15px;
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding: 0 15px; 
+    width: 70%;
+    line-height: 30px;
+    }
+    
+    
+    .letter-display {
+    font-size: 150px;
+    font-weight: bold;
+    color: #1abc9c;
+    }
+    
+    
+    .score-time {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 50%; 
+    right: 10%;
+    transform: translateY(-50%); 
+    }
+    
+    
+    .word-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    outline: none;
+    }
+    
+    .word-input:focus {
+    border-color: #1abc9c;
+    }
