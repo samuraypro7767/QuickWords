@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/styles.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
     <title>Play</title>
 </head>
 
@@ -28,31 +29,32 @@
     </header>
     <main>
         <div class="container-participants">
-            <button class="button-participants button-blue">
-                <i class='bx bx-user' style='color:#f3eeed'  ></i>
-                <i class='bx bx-user' style='color:#f3eeed'  ></i>
-            </button>
-            <button class="button-participants button-yellow">
-                <div class="player">
-                    <i class='bx bx-user' style='color:#f3eeed'  ></i>
-                    <i class='bx bx-user' style='color:#f3eeed'  ></i>
-                </div>
-                
-                <i class='bx bx-user' style='color:#f3eeed'  ></i>
-            </button>
-            <button class="button-participants button-green">
-                <div class="player">
-                    <i class='bx bx-user' style='color:#f3eeed'  ></i>
-                    <i class='bx bx-user' style='color:#f3eeed'  ></i>
-                </div>
-                <div class="player ">
-                    <i class='bx bx-user' style='color:#f3eeed'  ></i>
-                    <i class='bx bx-user' style='color:#f3eeed'  ></i>
-                </div>
-            </button>
+            <button class="button-participants button-blue" onclick="location.href='persons.html?color=blue&cantidad=2'">
+                <i class='bx bx-user' style='color:#f3eeed'></i>
+                <i class='bx bx-user' style='color:#f3eeed'></i>
+                </button>
+            <button class="button-participants button-yellow" onclick="location.href='persons.html?color=yellow&cantidad=3'">
+                    <div class=" player ">
+                        <i class='bx bx-user' style='color:#f3eeed'></i>
+                        <i class='bx bx-user' style='color:#f3eeed'></i>
+                    </div>
+
+                    <i class='bx bx-user' style='color:#f3eeed'></i>
+                    </button>
+            <button class="button-participants button-green" onclick="location.href='./persons.html?color=green&cantidad=4'">
+                        <div class=" player ">
+                            <i class='bx bx-user' style='color:#f3eeed'></i>
+                            <i class='bx bx-user' style='color:#f3eeed'></i>
+                        </div>
+                        <div class="player ">
+                            <i class='bx bx-user' style='color:#f3eeed'></i>
+                            <i class='bx bx-user' style='color:#f3eeed'></i>
+                        </div>
+                        </button>
         </div>
-        <a href="../index.html" class="button-participants button-red"><i class='bx bx-left-arrow-alt' style='color:#f3eeed' ></i> </a>
+        <a href="../index.html " class="button-participants button-red "><i class='bx bx-left-arrow-alt' style='color:#f3eeed' ></i> </a>
     </main>
+
 
 </body>
 
