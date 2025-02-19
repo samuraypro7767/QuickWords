@@ -11,7 +11,6 @@ function generarInputs(color, cantidad) {
         const input = document.createElement('input');
         input.type = 'text';
         input.placeholder = `Jugador ${i + 1}`;
-        input.style.backgroundColor = color;
         container.appendChild(input);
         container.appendChild(document.createElement('br')); // Salto de línea
     }
