@@ -82,9 +82,17 @@ const closeModal = () => {
     document.getElementById('letter').innerText = randomLetter(); // Generar una nueva letra
 }
 
-window.onload = function() {
+window.onload = function () {
+    // Obtener nombres guardados
+    const nombres = JSON.parse(localStorage.getItem("playerNames")) || [];
+
+    if (nombres.length > 0) {
+        document.querySelector('.player-name').innerText = nombres[0]; // Muestra el primer jugador
+    } else {
+        document.querySelector('.player-name').innerText = "Sin Jugador";
+    }
+
     const letter = randomLetter();
     document.getElementById('letter').innerText = letter;
-    console.log("Letra generada:", letter);
     contadorAtras();
 };
