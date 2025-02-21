@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clasificación-</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="containerClasifc">
+        <header>
+            <h1>
+                <span class="letter color1">C</span>
+                <span class="letter color2">L</span>
+                <span class="letter color3">A</span>
+                <span class="letter color4">C</span>
+                <span class="letter color5">I</span>
+                <span class="letter color6">F</span>
+                <span class="letter color7">I</span>
+                <span class="letter color8">C</span>
+                <span class="letter color9">A</span>
+                <span class="letter color10">C</span>
+                <span class="letter color1">I</span>
+                <span class="letter color2">Ó</span>
+                <span class="letter color3">N</span>
+            </h1>
+        </header>
+        <main>
+            <table class="tableClasifc">
+                <thead>
+                    <tr>
+                        <th>Posición</th>
+                        <th>Jugador</th>
+                        <th>Puntos</th>
+                        <th>Palabras</th> <!-- Nueva columna -->
+                    </tr>
+                </thead>
+                <tbody id="classificationTable">
+                    <!-- Se llenará con JS -->
+                </tbody>
+                
+            </table>
+            <button onclick="goBack()" class="buttonClasifc">Volver</button>
+        </main>
+    </div>
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+    const playersResults = JSON.parse(localStorage.getItem("playersResults")) || [];
+    playersResults.sort((a, b) => b.puntos - a.puntos);
+    const tableBody = document.getElementById("classificationTable");
+
+    tableBody.innerHTML = playersResults.map((player, index) => `
+        <tr>
+            <td>${index + 1}</td>
+            <td>${player.nombre}</td>
+            <td>${player.puntos}</td>
+        
+            <td>${[...new Set(player.palabras)].join(", ")}</td> <!-- Evita palabras repetidas -->
+
+            </tr>
+    `).join("");
+});
+
+
+
+
+        
+        function goBack() {
+            window.location.href = '../index.html';
+        }
+    </script>
+</body>
+</html>

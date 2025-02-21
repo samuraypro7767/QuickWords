@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    flex-direction: column;
+    background: #f7f0e6;
+    display: flex;
+    align-items: center;
+    background-image: url(../assets/img/fondoCuadricila.webp);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    height: 70%;
+}
+
+header {
+    width: 100%;
+    height: 20%;
+    padding: 50px 0px;
+}
+
+h1 {
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #555;
+    width: 100%;
+    padding: 0 0px;
+    text-align: center;
+    margin-top: 5rem;
+    font-style: italic;
+}
+
+h1 .color1 {
+    color: #4ce7bb;
+}
+
+h1 .color2 {
+    color: #0a0a0a;
+}
+
+h1 .color3 {
+    color: #d66356;
+}
+
+h1 .color4 {
+    color: #aaa3a3;
+}
+
+h1 .color5 {
+    color: #81d2e0;
+}
+
+h1 .color6 {
+    color: #f7de56;
+}
+
+h1 .color7 {
+    color: #1d1d1c;
+}
+
+h1 .color8 {
+    color: #878586;
+}
+
+h1 .color9 {
+    color: #c03f1e;
+}
+
+h1 .color10 {
+    color: #97e8f0;
+}
+
+.buttonContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.button-play {
+    filter: drop-shadow(2px 10px 5px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.button-play a {
+    width: 9rem;
+    height: 9rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 8rem;
+    text-decoration: none;
+    text-shadow: 0 5px 0px#555;
+}
+
+.button-play:hover {
+    transform: scale(0.9);
+    filter: drop-shadow(10px black);
+}
+
+.button-play-person {
+    margin-top: 1rem;
+    filter: drop-shadow(1px 5px 2.5px rgba(0, 0, 0, 0.5));
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.button-play-person a {
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 5rem;
+    text-decoration: none;
+    text-shadow: 0 5px 0px#555;
+}
+
+.button-play-person:hover {
+    transform: scale(0.9);
+    filter: drop-shadow(10px black);
+}
+
+.buttons-low {
+    display: flex;
+    filter: drop-shadow(2px 8px 5px rgba(0, 0, 0, 0.5));
+    height: 100%;
+    width: 100%;
+    transition: 0.5s;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+}
+
+.buttons-low a {
+    width: 6rem;
+    height: 6rem;
+    border: none;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+}
+
+.button.yellow {
+    background: #F4C20D;
+}
+
+.buttonsAction{
+    width: 40%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+}
+.startGame {
+    background: #F4C20D;
+    border-radius: 10px;
+    width:100%;
+    height: 100%;
+    font-size: 50px;
+    
+}
+#containerPlay{
+    display: flex;
+    background-color: transparent;
+    width: 80px;
+    height: 55px;
+    margin-bottom: 40px;
+    border: none;
+}
+
+.button.blue {
+    background: rgb(40, 138, 219);
+    margin-right: 2rem;
+
+}
+
+.button.red {
+    background: rgb(219, 71, 71);
+    margin-left: 2rem;
+}
+
+.button {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease, width 0.3s ease, height 0.3s ease;
+}
+
+.button:hover {
+    transform: scale(1.2);
+}
+
+.button:active {
+    transform: scale(1.4);
+}
+
+.button-play:active {
+    transform: scale(1);
+}
+
+.button-participants>.botonPlayers {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+}
+/*         participantes           */
+
+.container-participants {
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+    gap: 20px;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+}
+
+.button-participants {
+    width: 80px;
+    height: 80px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.conteiner-back {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button-blue {
+    background-color: #359fe5;
+}
+
+.button-yellow {
+    background-color: #f4c20d;
+}
+
+.button-green {
+    background-color: #4caf50;
+    ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+    position: relative;
+    top: -14%;
+    left: 62%;
+}
+
+.button-red {
+    background-color: #e53935;
+    ;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    position: relative;
+    top: 100px;
+    right: 3rem;
+}
+.button-red1 {
+    background-color: #e53935;
+    ;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    /* position: relative;
+    top: 100px;
+    right: 0rem; */
+}
+
+.player {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+/*       inputs    */
+
+input {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    background-color: #e9ddcc;
+}
+/* Cambia el borde al enfocar */
+
+input:focus {
+    border-color: #555;
+}
+/* Contenedor de los inputs */
+
+#inputs-container {
+    display: flex;
+    flex-direction: column;
+}
+/*      Game css    */
+
+.player-name {
+    font-size: 15px;
+    border-radius: 5%;
+    background-color: black;
+    color: white;
+    height: 30px;
+    padding: 0 15px;
+    width: 70%;
+    line-height: 30px;
+}
+
+.letter-display {
+    font-size: 150px;
+    font-weight: bold;
+    color: #1abc9c;
+}
+
+.score-time {
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.word-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    text-align: center;
+    outline: none;
+}
+
+.word-input:focus {
+    border-color: #1abc9c;
+}
+
+/* Animación para ocultar el modal y mostrar el siguiente jugador */
+
+#mainModal {
+display: none; /* Oculto por defecto */
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(231, 224, 224, 0.6); /* Fondo oscuro semi-transparente */
+justify-content: center;
+align-items: center;
+z-index: 1000; /* Asegura que el modal esté por encima de todo */
+border: none; /* Elimina el borde por defecto del <dialog> */
+}
+
+/* Mostrar el modal cuando está abierto */
+#mainModal[open] {
+display: flex;
+}
+
+/* Contenido del modal */
+.modal-content {
+background-color: #ffffff;
+padding: 2rem;
+border-radius: 12px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+max-width: 400px;
+width: 90%;
+text-align: center;
+position: relative;
+}
+
+/* Título del modal */
+.modal-content h2 {
+font-size: 1.75rem;
+margin-bottom: 1rem;
+color: #333;
+font-weight: 600;
+}
+
+/* Texto dentro del modal */
+.modal-content p {
+font-size: 1rem;
+color: #555;
+margin-bottom: 1.5rem;
+line-height: 1.5;
+}
+
+/* Span para el nombre del jugador y los puntos */
+.modal-content .player-name,
+.modal-content .num-points {
+font-weight: bold;
+background-color: transparent;
+font-size: 20px;
+font-style: italic;
+color: #ca1717; /* Verde para resaltar */
+}
+
+/* Botones del modal */
+.modal-content button {
+padding: 0.75rem 1.0rem;
+border: none;
+border-radius: 8px;
+font-size: 1rem;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.2s ease;
+margin: 0.5rem;
+font-weight: 500;
+
+}
+
+/* Botón "Siguiente Jugador" */
+#nextPlayerBtn {
+background-color: #4ce7bb;
+color: rgb(255, 255, 255);
+border: none;
+}
+
+#nextPlayerBtn:hover {
+background-color: #4ce7bb; /* Verde más oscuro al pasar el mouse */
+transform: scale(1.05); /* Efecto de escala al hover */
+border: none;
+}
+
+/* Botón "Ver Clasificación" */
+#viewClasificationBtn {
+background-color: #1c51e0; /* Azul */
+color: white;
+}
+
+#viewClasificationBtn:hover {
+background-color: #1e88e5; /* Azul más oscuro al pasar el mouse */
+transform: scale(1.05); /* Efecto de escala al hover */
+}
+
+/* Efecto al hacer clic en los botones */
+.modal-content button:active {
+transform: scale(0.95); /* Efecto de escala al hacer clic */
+}
+
+/* clasificacion */
+
+.containerClasifc {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+    max-width: 600px;
+}
+
+.h1Clasifc {
+    color: #333;
+}
+
+.tableClasifc {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 100px;
+}
+
+th, td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: center;
+}
+
+th {
+    background-color: #467db8;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.buttonClasifc {
+    margin-top: 20px;
+    padding: 10px 20px;
+    border: none;
+    background: #007BFF;
+    color: white;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.buttonClasifc:hover {
+    background: #0056b3;
+}

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickWords </title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+</head>
+<body>
+
+    <header>
+        <h1>
+            <span class="letter color1">Q</span>
+            <span class="letter color2">u</span>
+            <span class="letter color3">i</span>
+            <span class="letter color4">c</span>
+            <span class="letter color5">k</span>
+            <span class="letter color6">W</span>
+            <span class="letter color7">o</span>
+            <span class="letter color8">r</span>
+            <span class="letter color9">d</span>
+            <span class="letter color10">s</span>
+        </h1>
+    </header>
+    <main>
+        <div class="buttonContainer">
+            <div class="button-play">
+                <a href="templates/players.html" class="button yellow" title="Jugar"><i class='bx bx-play' style='color:#ffffff'></i></a>
+            </div>
+            <div class="buttons-low">
+                <a class="button blue menu" title="Menú"><i class='bx bx-food-menu' style='color:#ffffff'></i></a>
+                <a class="button red" id="audioButton" title="Musica">
+                    <i class='bx bxs-volume-full' id="audioIcon" style='color:#ffffff'></i>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    
+    <dialog id="menuModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModalBtn" class="close-modal" title="Cerrar">
+                <i class='bx bx-x' style='color:#eb0202'></i>
+            </button>
+            <h2>Información del Juego</h2>
+            <p>
+                ¡Bienvenido a QuickWords! Este es un juego de palabras donde debes escribir tantas palabras como puedas
+                que comiencen con una letra específica. Gana puntos por cada palabra válida. ¡Diviértete!
+            </p>
+
+            <h2>Intrucciones</h2><br><br>
+
+            <h3>Objetivo</h3><br>
+            <p>Cada jugador debe ingresar palabras únicas que comiencen con una letra aleatoria en turnos de 1 minuto. <br> Al final del cuarto turno, el jugador con más palabras válidas gana.</p><br><br>
+          
+            <h3>¿Comó Jugar?</h3><br>
+            <p>1. Se elige la cantidad de jugadores</p>
+            <p>2. Se genera una letra aleatoria</p>
+            <p>3. El jugador tiene 1 minuto para ingresar palabras que inicien con esa letra</p>
+            <p>4. Se muestra la lista y cantidad de palabras</p>
+            <p>5. El turno para al siguiente jugador con nueva letra.</p>
+            <p>6. Al final vamos a ver el ganador.</p>
+        </div>
+    </dialog>
+
+    <script src="scripts/music.js"></script>
+</body>
+</html>
