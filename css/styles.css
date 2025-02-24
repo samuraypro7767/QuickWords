@@ -14,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     background-image: url(../assets/img/fondoCuadricila.webp);
-    background-size: cover;
+    
 }
 
 main {
