@@ -13,7 +13,8 @@ body {
     background: #f7f0e6;
     display: flex;
     align-items: center;
-    background-image: url(../assets/img/fondoCuadricila.webp);
+    background-image: url(../assets/img/fondo1.jpg);
+    background-size: cover;
 }
 
 main {
@@ -532,4 +533,52 @@ tr:nth-child(even) {
 
 .buttonClasifc:hover {
     background: #0056b3;
+}
+
+
+/*  alertas */
+
+#custom-alert-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.custom-alert {
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    color: white;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.custom-alert button {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Colores para las alertas */
+.custom-alert.info {
+    background-color: #359fe5;
+}
+
+.custom-alert.warning {
+    background-color: #f4c20d;
+}
+
+.custom-alert.success {
+    background-color: #4caf50;
+}
+
+.custom-alert.error {
+    background-color: #e53935;
 }

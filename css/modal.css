@@ -1,4 +1,3 @@
-/* Estilos para el modal */
 .modal {
     position: fixed;
     top: 50%;
@@ -63,5 +62,78 @@
 
 /* Fondo oscuro detrás del modal */
 .modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+
+/* segundo modal  */
+
+.modal1 {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    background-color: transparent;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 15px; 
+    z-index: 1000;
+    display: none;
+    width: 90%;
+    max-width: 500px;
+    border: none; 
+    scrollbar-width: none;
+}
+
+.modal1[open] {
+    display: block;
+}
+
+.modal-content1 {
+    position: relative;
+    text-align: center;
+}
+
+.modal-content1 h2 {
+    margin-bottom: 15px;
+    font-size: 1.5em;
+    color: #359fe5;
+}
+
+.modal-content1 h3 {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #359fe5;
+}
+
+.modal-content1 p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.5;
+    margin: 5px 0;
+}
+
+.close-modal1 {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: none;
+    cursor: pointer;
+    border: none;
+    
+}
+
+.close-modal1 i {
+    color: #ff0000;
+    font-size: 2rem;
+    border: none;
+}
+
+.close-modal1:hover i {
+    color: #ff0000; /* Cambiar color al pasar el mouse */
+}
+
+/* Fondo oscuro detrás del modal */
+.modal1::backdrop {
     background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
 }

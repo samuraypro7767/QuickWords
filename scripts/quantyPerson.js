@@ -1,7 +1,9 @@
+// Obtener parámetros de la URL
 const urlParams = new URLSearchParams(window.location.search);
 const color = urlParams.get('color');
 const cantidad = parseInt(urlParams.get('cantidad'));
 
+// Función para generar los inputs de los jugadores
 function generarInputs(color, cantidad) {
     console.log("Cantidad de jugadores:", cantidad); // Depuración
 
@@ -23,8 +25,34 @@ function generarInputs(color, cantidad) {
     }
 }
 
+// Función para mostrar alertas personalizadas
+function showCustomAlert(message, type) {
+    const container = document.getElementById('custom-alert-container');
 
-// Función para guardar los nombres en localStorage y redirigir al juego
+    // Crear el elemento de la alerta
+    const alertDiv = document.createElement('div');
+    alertDiv.className = `custom-alert ${type}`;
+    alertDiv.textContent = message;
+
+    // Botón para cerrar la alerta
+    const closeButton = document.createElement('button');
+    closeButton.textContent = '×';
+    closeButton.onclick = () => container.removeChild(alertDiv);
+
+    // Añadir el botón a la alerta
+    alertDiv.appendChild(closeButton);
+
+    // Añadir la alerta al contenedor
+    container.appendChild(alertDiv);
+
+    // Eliminar la alerta después de 5 segundos
+    setTimeout(() => {
+        if (container.contains(alertDiv)) {
+            container.removeChild(alertDiv);
+        }
+    }, 5000);
+}
+
 // Función para guardar los nombres en localStorage y redirigir al juego
 function jugar() {
     const inputs = document.querySelectorAll('.player-input');
@@ -32,7 +60,7 @@ function jugar() {
 
     for (let input of inputs) {
         if (input.value.trim() === "") {
-            alert("Todos los jugadores deben ingresar su nombre antes de jugar.");
+            showCustomAlert("Todos los jugadores deben ingresar su nombre antes de jugar.", "error");
             return; // Detener la función si falta algún nombre
         }
         nombres.push(input.value.trim());
@@ -51,5 +79,3 @@ document.querySelector(".button-play-person a").addEventListener("click", functi
     event.preventDefault(); // Prevenir la redirección automática
     jugar();
 });
-
-
