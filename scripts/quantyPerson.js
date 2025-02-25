@@ -27,11 +27,11 @@ function generarInputs(color, cantidad) {
 
 // Función para mostrar alertas personalizadas
 function showCustomAlert(message, type) {
-    const container = document.getElementById('custom-alert-container');
+    const container = document.getElementById('custom-alert-contain');
 
     // Crear el elemento de la alerta
     const alertDiv = document.createElement('div');
-    alertDiv.className = `custom-alert ${type}`;
+    alertDiv.className = `custom-aler ${type}`;
     alertDiv.textContent = message;
 
     // Botón para cerrar la alerta

@@ -6,13 +6,13 @@
 }
 
 body {
-    height: 100vh;
-    width: 100vw;
-    justify-content: center;
+    height: 98vh;
+    width: 99vw;
+    padding: 0px 0 0 2.5px;
+    justify-content:center;
     flex-direction: column;
     background: #f7f0e6;
     display: flex;
-    align-items: center;
     background-image: url(../assets/img/fondoCuadricila.webp);
     
 }
@@ -24,24 +24,26 @@ main {
     text-align: center;
     justify-content: center;
     width: 100%;
-    height: 70%;
+    height: 50%;
 }
 
 header {
     width: 100%;
     height: 20%;
-    padding: 50px 0px;
+    padding: 0px 0px;
+    padding:50px 0 ;
+
 }
 
 h1 {
     width: 100%;
+    height: 50%;
     font-size: 2.5rem;
     font-weight: bold;
     color: #555;
     width: 100%;
     padding: 0 0px;
     text-align: center;
-    margin-top: 5rem;
     font-style: italic;
 }
 
@@ -340,22 +342,33 @@ input:focus {
     flex-direction: column;
 }
 /*      Game css    */
-
+.headerAlter{
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    width: 90%;
+}
+#audioButton2 i {
+    font-size: 40px;
+}
 .player-name {
     font-size: 15px;
-    border-radius: 5%;
-    background-color: black;
+    border-radius: 6px;
+    background-color: rgb(36, 35, 35);
     color: white;
-    height: 30px;
-    padding: 0 15px;
-    width: 70%;
+    height: 40px;
+    padding: 5px 0px 0px 50px;
+    width: 13rem;
     line-height: 30px;
+    font-family:sans-serif;
+    font-weight: bold;
 }
 
 .letter-display {
     font-size: 150px;
     font-weight: bold;
     color: #1abc9c;
+    margin-left: -40%;
 }
 
 .score-time {
@@ -368,6 +381,9 @@ input:focus {
     top: 50%;
     right: 10%;
     transform: translateY(-50%);
+}
+.score-time .score{
+    color: #F4C20D;
 }
 
 .word-input {
@@ -458,25 +474,25 @@ font-weight: 500;
 
 /* Botón "Siguiente Jugador" */
 #nextPlayerBtn {
-background-color: #4ce7bb;
+background-color: #4caf50;
 color: rgb(255, 255, 255);
 border: none;
 }
 
 #nextPlayerBtn:hover {
-background-color: #4ce7bb; /* Verde más oscuro al pasar el mouse */
+background-color: #4caf50; /* Verde más oscuro al pasar el mouse */
 transform: scale(1.05); /* Efecto de escala al hover */
 border: none;
 }
 
 /* Botón "Ver Clasificación" */
 #viewClasificationBtn {
-background-color: #1c51e0; /* Azul */
+background-color: #359fe5; /* Azul */
 color: white;
 }
 
 #viewClasificationBtn:hover {
-background-color: #1e88e5; /* Azul más oscuro al pasar el mouse */
+background-color: #359fe5; /* Azul más oscuro al pasar el mouse */
 transform: scale(1.05); /* Efecto de escala al hover */
 }
 
@@ -486,13 +502,16 @@ transform: scale(0.95); /* Efecto de escala al hacer clic */
 }
 
 /* clasificacion */
-
+.titltleClasification{
+    width: 100%;
+    font-size: 30px;
+}
 .containerClasifc {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
-    width: 80%;
-    max-width: 600px;
+    width: 100%;
+    max-width: 900px;
 }
 
 .h1Clasifc {
@@ -512,7 +531,7 @@ th, td {
 }
 
 th {
-    background-color: #467db8;
+    background-color: #D66356;
     color: white;
 }
 
@@ -524,7 +543,7 @@ tr:nth-child(even) {
     margin-top: 20px;
     padding: 10px 20px;
     border: none;
-    background: #007BFF;
+    background: #ca514c;
     color: white;
     font-size: 16px;
     border-radius: 5px;
@@ -532,20 +551,21 @@ tr:nth-child(even) {
 }
 
 .buttonClasifc:hover {
-    background: #0056b3;
+    background: #ca514c;
 }
 
 
 /*  alertas */
-
-#custom-alert-container {
+ 
+#custom-alert-contain {
     position: fixed;
+    width: 300px;
     top: 20px;
-    right: 20px;
+    right: 3px;
     z-index: 1000;
 }
 
-.custom-alert {
+.custom-aler {
     padding: 15px;
     margin-bottom: 10px;
     border-radius: 5px;
@@ -558,7 +578,7 @@ tr:nth-child(even) {
     justify-content: space-between;
 }
 
-.custom-alert button {
+.custom-aler button {
     background: none;
     border: none;
     color: white;
@@ -566,19 +586,64 @@ tr:nth-child(even) {
     font-size: 16px;
 }
 
-/* Colores para las alertas */
-.custom-alert.info {
+
+.custom-aler.info {
     background-color: #359fe5;
 }
 
-.custom-alert.warning {
-    background-color: #f4c20d;
+.custom-aler.warning {
+    background-color: #020201;
 }
 
-.custom-alert.success {
+.custom-aler.success {
     background-color: #4caf50;
 }
 
-.custom-alert.error {
+.custom-aler.error {
     background-color: #e53935;
+} 
+
+/* styles.css */
+.custom-alert {
+    display: none;
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #ff4444;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+    width: 300px;
+
 }
+
+.alert-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#alertCloseBtn {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+@keyframes slideIn {
+    from {
+        top: -50px;
+        opacity: 0;
+    }
+    to {
+        top: 20px;
+        opacity: 1;
+    }
+}
+

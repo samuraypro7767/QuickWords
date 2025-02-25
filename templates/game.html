@@ -9,11 +9,11 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <span class="player-name">Nombre Jugador</span>
-            <div class="music">
-                <a href="#" id="audioButton" title="Música">
-                    <i class='bx bxs-volume-full' id="audioIcon" style='color:#ffffff'></i>
+        <header class="headerAlter">
+            <div class="player-name">Nombre Jugador</div>
+            <div class="music1">
+                <a href="#" id="audioButton2" title="Música">
+                    <i class='bx bxs-volume-full' id="audioIcon2" style='color:#333'></i>
                 </a>
             </div>
         </header>
@@ -25,9 +25,8 @@
                 <span class="time" id="time">01:00</span>
             </div>
             <input type="text" class="word-input" placeholder="Escribe aquí...">
-        
+            
             <!-- Modal de tiempo agotado -->
-             
             <dialog id="mainModal" class="modal">
                 <div class="modal-content">
                     <h2>Tiempo Agotado</h2>
@@ -38,9 +37,18 @@
                 </div>
             </dialog>
         </main>
-        
     </div>
 
+    <!-- Alerta personalizada -->
+    <div id="customAlert" class="custom-alert">
+        <div class="alert-content">
+            <span id="alertMessage"></span>
+            <button id="alertCloseBtn">&times;</button>
+        </div>
+    </div>
+
+    <!-- Importar el archivo JavaScript -->
+    <script src="../scripts/audioPlayer.js"></script>
     <script src="../scripts/index.js"></script>
 </body>
 </html>

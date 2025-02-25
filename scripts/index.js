@@ -1,3 +1,5 @@
+
+// index.js
 let generatedLetters = [];
 let players = JSON.parse(localStorage.getItem("playerNames")) || ["Jugador 1", "Jugador 2"];
 let currentPlayerIndex = 0;
@@ -19,7 +21,7 @@ function randomLetter() {
 
 // Temporizador
 function contadorAtras() {
-    let tiempoRestante = 3;
+    let tiempoRestante = 2;
     let intervalo = setInterval(() => {
         if (tiempoRestante > 0) {
             document.getElementById('time').innerText = `00:${tiempoRestante < 10 ?  + tiempoRestante : tiempoRestante}`;
@@ -41,17 +43,17 @@ function guardarPalabra() {
     const letraGenerada = document.getElementById("letter").innerText;
 
     if (palabra === "") {
-        alert("Debes ingresar una palabra.");
+        showCustomAlert("Debes ingresar una palabra.");
         return;
     }
 
     if (!palabra.startsWith(letraGenerada)) {
-        alert(`La palabra debe comenzar con la letra ${letraGenerada}`);
+         showCustomAlert(`La palabra debe comenzar con la letra ${letraGenerada}`);
         return;
     }
 
     if (enteredWords.includes(palabra)) {
-        alert("Esta palabra ya ha sido ingresada. Intenta con otra.");
+         showCustomAlert("Esta palabra ya ha sido ingresada. Intenta con otra.");
         return;
     }
 
@@ -128,6 +130,29 @@ const viewClasification = () => {
 
     window.location.href = '../templates/classification.html';
 };
+
+// Mostrar alerta personalizada
+function showCustomAlert(message) {
+    const alert = document.getElementById("customAlert");
+    const alertMessage = document.getElementById("alertMessage");
+
+    alertMessage.innerText = message;
+    alert.style.display = "block";
+
+    // Ocultar la alerta después de 3 segundos
+    setTimeout(() => {
+        hideCustomAlert();
+    }, 3000);
+}
+
+// Ocultar alerta personalizada
+function hideCustomAlert() {
+    const alert = document.getElementById("customAlert");
+    alert.style.display = "none";
+}
+
+// Cerrar la alerta manualmente
+document.getElementById("alertCloseBtn").addEventListener("click", hideCustomAlert);
 
 window.onload = function () {
     document.getElementById('letter').innerText = randomLetter();
