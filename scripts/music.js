@@ -1,5 +1,5 @@
 // Configuración del audio
-let audio = new Audio('../assets/audio/musica.mp3');
+let audio = new Audio('../assets/audio/music.mp3');
 let isPlaying = true;
 const audioButton = document.getElementById('audioButton');
 const audioIcon = document.getElementById('audioIcon');
