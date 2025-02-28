@@ -21,7 +21,7 @@ function randomLetter() {
 
 // Temporizador
 function contadorAtras() {
-    let tiempoRestante = 2;
+    let tiempoRestante = 59;
     let intervalo = setInterval(() => {
         if (tiempoRestante > 0) {
             document.getElementById('time').innerText = `00:${tiempoRestante < 10 ?  + tiempoRestante : tiempoRestante}`;
